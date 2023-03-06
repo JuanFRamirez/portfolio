@@ -1,5 +1,3 @@
-//import NormalMap from './textures/NormalMap.png';
-
 // canvas
 const canvas = document.querySelector('.shape');
 

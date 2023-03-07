@@ -476,8 +476,9 @@ a {
   font-size: 3.5em;
 }
 
-.s2-container article h2 {
-  background: #ffffffde;
+.s2-container article {
+  color: #fff;
+  mix-blend-mode: difference;
 }
 
 .s2-container article p,
@@ -493,8 +494,6 @@ a {
   font-size: 1.2rem;
   border: none;
   border-radius: 5px;
-  background: #292929;
-  color: #fff;
   font-weight: 700;
 }
 
@@ -1310,15 +1309,24 @@ form input{
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .slide .hero-image {
+    -ms-flex-preferred-size: 22rem;
+        flex-basis: 22rem;
+  }
   .slide .hero-desc {
     width: 100%;
     padding: 1rem;
+    overflow: hidden;
   }
   .slide .hero-desc .title h2 {
     font-size: 2em !important;
     text-align: left;
     padding: 0;
     margin: 0;
+  }
+  .servicios .servicios-container {
+    padding: 0 !important;
+    margin: 0 !important;
   }
   .contacts div {
     margin: 1rem 0rem;

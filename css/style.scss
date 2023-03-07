@@ -420,8 +420,9 @@ a {
   font-size: 3.5em;
 }
 
-.s2-container article h2{
-  background: #ffffffde;
+.s2-container article{
+  color: #fff;
+  mix-blend-mode: difference;
 }
 
 .s2-container article p,
@@ -437,8 +438,6 @@ a {
   font-size: 1.2rem;
   border: none;
   border-radius: 5px;
-  background: #292929;
-  color: #fff;
   font-weight: 700;
 }
 
@@ -1090,15 +1089,25 @@ form input{
   }
   .slide {
     flex-direction: column;
+    .hero-image{
+      flex-basis: 22rem;
+    }
     .hero-desc {
       width: 100%;
       padding: 1rem;
+      overflow: hidden;
       .title h2 {
         font-size: 2em !important;
         text-align: left;
         padding: 0;
         margin: 0;
       }
+    }
+  }
+  .servicios{
+    .servicios-container{
+      padding: 0 !important;
+      margin: 0 !important;
     }
   }
   .contacts div {

@@ -20,12 +20,12 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Italiana";
+  font-family: 'Italiana';
   font-weight: 700;
 }
 
 p {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
 }
 
 .main-portrait {
@@ -81,7 +81,6 @@ p {
   z-index: -100;
   margin: 0;
   padding: 0;
-  background: #000;
   height: calc(100% + 5rem);
 }
 
@@ -133,6 +132,7 @@ nav ul li a {
   font-size: 1rem;
   text-decoration: none;
   font-weight: 700;
+  font-family: 'italiana';
 }
 
 .about a {
@@ -146,6 +146,10 @@ a {
 .link-active {
   -webkit-box-shadow: 0 3px 0px #fff;
           box-shadow: 0 3px 0px #fff;
+}
+
+.header {
+  opacity: 0;
 }
 
 .logo {
@@ -174,7 +178,7 @@ a {
   align-content: center;
   height: 100%;
   width: 100%;
-  padding: 10rem;
+  padding: 8rem;
   min-height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -183,19 +187,36 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #000;
   z-index: 3;
 }
 
+.main-container .main-headers, .main-container .heading, .main-container .button-box {
+  opacity: 0;
+  -webkit-animation: appear 1.2s ease 2.5s forwards;
+          animation: appear 1.2s ease 2.5s forwards;
+}
+
+.main-container .heading {
+  font-size: 9rem;
+  width: 100%;
+}
+
 .main-container .photo {
-  width: 44%;
+  width: 25vw;
+  height: 80vh;
   position: absolute;
-  right: 0%;
-  top: 8%;
+  right: 50%;
+  left: 50%;
+  top: 44%;
   z-index: -1;
   -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  background: linear-gradient(45deg, orange, #9C27B0);
+  transform: translate(-50%, -50%);
+  background-image: url("../img/fotos/beach.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .main-container img {
@@ -213,11 +234,9 @@ a {
 
 .main-container .cv {
   position: absolute;
-  right: 33%;
+  right: 15%;
   top: 80%;
   font-size: 1.2rem;
-  -webkit-transform: rotatez(-90deg);
-          transform: rotatez(-90deg);
   font-weight: 700;
 }
 
@@ -226,10 +245,8 @@ a {
 }
 
 .main-container .cv a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
-  -webkit-filter: drop-shadow(2px 4px 6px black);
-          filter: drop-shadow(2px 4px 6px black);
   font-size: 0.8rem;
 }
 
@@ -255,48 +272,51 @@ a {
   transition: all 0.5s ease;
 }
 
-.svg-inline--fa:hover:nth-of-type(1) {
-  color: orangered;
-}
+.svg-inline--fa:hover {
+  /* &:nth-of-type(3) {
+      color: orangered;
+    }
 
-.svg-inline--fa:hover:nth-of-type(2) {
-  color: blue;
-}
+    &:nth-of-type(5) {
+      color: blue;
+    }
 
-.svg-inline--fa:hover:nth-of-type(3) {
-  color: #cd6799;
-}
+    &:nth-of-type(4) {
+      color: #cd6799;
+    }
 
-.svg-inline--fa:hover:nth-of-type(4) {
-  color: #f7df1e;
-}
+    &:nth-of-type(6) {
+      color: #f7df1e;
+    }
 
-.svg-inline--fa:hover:nth-of-type(5) {
-  color: #73b956;
-}
+    &:nth-of-type(7) {
+      color: #73b956;
+    }
 
-.svg-inline--fa:hover:nth-of-type(6) {
-  color: #00d8ff;
-}
+    &:nth-of-type(8) {
+      color: #00d8ff;
+    }
 
-.svg-inline--fa:hover:nth-of-type(7) {
-  color: #777bb3;
-}
+    &:nth-of-type(9) {
+      color: #777bb3;
+    }
 
-.svg-inline--fa:hover:nth-of-type(8) {
-  color: #e68c1c;
-}
+    &:nth-of-type(10) {
+      color: #e68c1c;
+    }
 
-.svg-inline--fa:hover:nth-of-type(9) {
-  color: #0275a1;
-}
+    &:nth-of-type(11) {
+      color: #0275a1;
+    }
 
-.svg-inline--fa:hover:nth-of-type(10) {
-  color: #fe141f;
-}
+    &:nth-of-type(12) {
+      color: #fe141f;
+    }
 
-.svg-inline--fa:hover:nth-of-type(11) {
-  color: green;
+    &:nth-of-type(13) {
+      color: green;
+    }
+  */
 }
 
 .shape {
@@ -537,7 +557,7 @@ a {
 }
 
 .cards .card::after {
-  content: "";
+  content: '';
   width: 1px;
   height: 3.5rem;
   background-color: #000;
@@ -627,6 +647,7 @@ p {
   z-index: 999;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+  opacity: 1;
 }
 
 .fixed nav ul li a {
@@ -643,19 +664,13 @@ p {
   font-weight: 700;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  background-color: #fff;
+  background-color: transparent;
   color: #000;
   width: 15%;
   padding: 1.2rem;
   border: none;
   border-radius: 5px;
   margin: 1rem;
-}
-
-.secundary {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
 }
 
 .secundary:hover {
@@ -1228,6 +1243,24 @@ form input{
   to {
     width: 0;
     height: 0;
+  }
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0 !important;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0 !important;
+  }
+  to {
+    opacity: 1;
   }
 }
 

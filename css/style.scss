@@ -131,7 +131,7 @@ a {
   box-shadow: 0 3px 0px #fff;
 }
 
-.header{
+.header {
   opacity: 0;
 }
 
@@ -162,15 +162,25 @@ a {
   flex-direction: column;
   justify-content: center;
   z-index: 3;
+  background-color: #fff;
 
-  .main-headers,.heading,.button-box{
+  .main-headers,
+  .heading,
+  .button-box {
     opacity: 0;
-    animation: appear 1.2s ease 2.5s forwards;
+    animation: appear 1.2s ease 1.5s forwards;
+    background-color: #ffffff00;
+  }
+
+  .difference {
+    mix-blend-mode: difference;
   }
 
   .heading {
     font-size: 9rem;
     width: 100%;
+    color: #fff;
+    mix-blend-mode: difference;
   }
 
   .photo {
@@ -182,12 +192,14 @@ a {
     top: 44%;
     z-index: -1;
     -webkit-transform: rotateY(180deg);
-    transform: translate(-50%, -50%);
-    background-image: url('../img/fotos/beach.jpg');
+    opacity: 0;
+    transform: translate(-50%, -40%);
+    background-image: url('../img/fotos/juan-pic.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
+    animation: appear-to-center 1.3s forwards 2.3s;
   }
 
   img {
@@ -213,7 +225,6 @@ a {
     }
 
     a {
-      color: #000;
       text-decoration: none;
       font-size: 0.8rem;
     }
@@ -241,7 +252,7 @@ a {
   transition: all 0.5s ease;
 
   &:hover {
-   /* &:nth-of-type(3) {
+    /* &:nth-of-type(3) {
       color: orangered;
     }
 
@@ -284,7 +295,8 @@ a {
     &:nth-of-type(13) {
       color: green;
     }
-  */}
+  */
+  }
 }
 
 .shape {
@@ -591,20 +603,14 @@ p {
   font-weight: 700;
   transition: all 0.2s ease;
   background-color: transparent;
-  color: #000;
   width: 15%;
   padding: 1.2rem;
   border: none;
   border-radius: 5px;
   margin: 1rem;
-}
-
-.secundary {
-
-  &:hover {
-    background-color: #fff;
-    color: #000;
-  }
+  font-family: 'italiana';
+  color: #fff;
+  mix-blend-mode: difference;
 }
 
 .about:hover {
@@ -654,11 +660,11 @@ p {
   top: 50%;
   width: 3000px;
   height: 3000px;
-  background: #fff;
+  background: radial-gradient(circle, rgba(2,0,36,1) 46%, rgba(252,243,251,1) 59%, rgba(240,236,240,1) 100%);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  transition: all 1s ease;
+  transition: all .5s ease;
 }
 
 .columns-container {
@@ -667,7 +673,7 @@ p {
 }
 
 .big-circle-anim {
-  animation: tocenter 0.8s ease 1s forwards;
+  animation: tocenter 0.8s ease .1s forwards;
 }
 
 .big-circle-anim-leave {
@@ -1027,15 +1033,28 @@ form input{
   }
 }
 
+@keyframes appear-to-center {
+  from {
+    transform: translate(-50%, -40%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
 @keyframes tocenter {
   from {
     width: 3000px;
     height: 3000px;
+    opacity: 1;
   }
 
   to {
     width: 0;
     height: 0;
+    opacity: 0;
   }
 }
 

@@ -132,7 +132,7 @@ a {
 }
 
 .header {
-  opacity: 0;
+  opacity: 1;
 }
 
 .logo {
@@ -220,6 +220,7 @@ a {
     top: 80%;
     font-size: 1.2rem;
     font-weight: 700;
+    font-family: 'italiana';
     &:hover {
       cursor: pointer;
     }

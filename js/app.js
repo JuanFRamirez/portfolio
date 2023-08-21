@@ -127,11 +127,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
   });
 });
 
-document.addEventListener('click', (e) => {
-  if (e.target && e.target.id == 'open-menu') {
-    mobilmenu.style.display = 'flex';
-  }
-});
+function showMenu(e) {
+  mobilmenu.style.display = 'flex';
+}
 
 document.addEventListener('click', (e) => {
   if (e.target && e.target.classList.contains('close')) {

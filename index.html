@@ -20,6 +20,7 @@
     <title>Juan Ramirez Web Development</title>
   </head>
   <body>
+    <div class="container">
     <a id="open-menu-link" onclick="showMenu(this)"><i class="fas fa-bars open-menu" id="open-menu"></i></a>
     <div class="s=header">
       <div class="header">
@@ -61,14 +62,16 @@
     </div>
     <div class="bg"></div>
     <div class="cursor"></div>
-    <div class="main-container" id="Inicio">
-      <div class="photo"></div>
-      <div class="big-circle"></div>
+    <div class="main-container" id="Inicio" style="position: relative;">
+      <div class="big-circle">
+      </div>
+        <canvas class="shape">
+         
+        </canvas>
       <div class="main-headers difference">
-        <p class="text white-text difference">
+        <p class="text white-text difference ml-3">
           Web developer
         </p>
-        <p class="cv"><a href="#" class="white-text difference">Download cv</a></p>
       </div>
       <h1 class="heading invert-bright">
         JUAN RAMIREZ
@@ -76,14 +79,15 @@
       <div class="button-box difference">
         <p class="about nav-links primary white-text difference">Projects</p>
         <p class="about nav-links secundary white-text difference">Contacts</p>
+        <p class="cv about"><a href="#" class="white-text difference">Download cv</a></p>
       </div>
     </div>
     <section class="why">
       <div class="value">
         <div>
-          <h3 class="value-header3">Seeking for a WebDev?</h3>
+          <h3 class="value-header3">Seeking for a Web Developer?</h3>
           <p class="value-parag">
-            Hello, my name is Juan Ramirez, I am a web developer with experience in application and website development, frontend / backend specialized in React and PHP.
+            Hello, my name is Juan Ramirez, I am a web developer with experience in application and website development, fullstack specialized in React, Nodejs, Laravel and a few other technologies.
           </p>
           <br />
           <p class="keep-scrolling">
@@ -96,7 +100,7 @@
       </div>
       <div class="broken-image1">
         <img
-          src="./img/abstract-black.jpg"
+          src="./img/fotos/juan-pic.jpg"
           class="haze"
           alt="abstract art purple waves"
         />
@@ -289,9 +293,6 @@
     </section>
     <section class="s2">
       <div class="s2-container">
-        <canvas class="shape">
-         
-        </canvas>
         <img
           loading="lazy"
           class="main-portrait"
@@ -389,5 +390,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/app.js"></script>
     <script src="./js/3d.js"></script>
+    </div>
   </body>
 </html>

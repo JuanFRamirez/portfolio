@@ -22,24 +22,24 @@ const sphere = new THREE.Mesh(geometry, material);
 scene.add(sphere);
 
 //lights
-const pointLight = new THREE.PointLight('purple', 0.8, 80);
-pointLight.position.x = 5;
+const pointLight = new THREE.PointLight('purple', 1, 80);
+pointLight.position.x = -5;
 pointLight.position.y = 10;
 pointLight.position.z = 10;
 scene.add(pointLight);
 
-const pointLight2 = new THREE.PointLight('yellow', 0.8, 50);
+const pointLight2 = new THREE.PointLight('purple', 0.5, 100);
 pointLight2.position.x = -10;
-pointLight2.position.y = 0;
-pointLight2.position.z = 2;
-//scene.add(pointLight2);
+pointLight2.position.y = -10;
+pointLight2.position.z = 6;
+scene.add(pointLight2);
 
-const ambienLight = new THREE.AmbientLight('pink', 1);
+const ambienLight = new THREE.AmbientLight('white', 1);
 scene.add(ambienLight);
 
 const sizes = {
-  width: 300,
-  height: 300,
+  width: 700,
+  height: 700,
 };
 
 //camera
@@ -60,8 +60,8 @@ renderer.setPixelRatio(2);
 const clock = new THREE.Clock();
 
 window.addEventListener('resize', () => {
-  sizes.width = 300;
-  sizes.height = 300;
+  sizes.width = 700;
+  sizes.height = 700;
   camera.aspect = sizes.width / sizes.height;
   camera.updateProjectionMatrix();
   renderer.setSize(sizes.width, sizes.height);

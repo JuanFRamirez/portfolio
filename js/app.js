@@ -276,7 +276,7 @@ hire.addEventListener('click', (e) => {
 
 const options = {
   root: null,
-  rootMargin: '10px',
+  rootMargin: '-20px',
   threshold: 0.8,
 };
 
@@ -288,7 +288,7 @@ if (window.innerWidth) {
         tl.fromTo(
           haze,
           { top: '26rem', right: '0', opacity: 0 },
-          { top: '20rem', right: '10%', opacity: 1 },
+          { top: '7rem', right: '10%', opacity: 1, filter: "grayscale(1) brightness(1)" },
           '0.5'
         )
           .fromTo(

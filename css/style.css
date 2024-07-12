@@ -13,6 +13,11 @@ body {
   overflow-x: hidden;
 }
 
+body .container {
+  max-width: 1900px;
+  margin: auto;
+}
+
 .scrollmagic-pin-spacer {
   width: 100% !important;
 }
@@ -128,7 +133,7 @@ nav ul {
 
 nav ul li a {
   padding: 0rem 1rem;
-  color: #fff;
+  color: #000;
   font-size: 1rem;
   text-decoration: none;
   font-weight: 700;
@@ -157,11 +162,11 @@ a {
 }
 
 .logo a {
-  color: #fff;
+  color: #000;
   font-size: 1rem;
   font-weight: 700;
   padding: 2rem 3rem;
-  border: 1px solid #fff;
+  border: 1px solid #000;
 }
 
 .logo .link-active {
@@ -211,6 +216,10 @@ a {
   mix-blend-mode: difference;
 }
 
+.main-container .ml-3 {
+  margin-left: 1rem;
+}
+
 .main-container .photo {
   width: 25vw;
   height: 80vh;
@@ -247,11 +256,7 @@ a {
 }
 
 .main-container .cv {
-  position: absolute;
-  right: 15%;
-  top: 80%;
   font-size: 1.2rem;
-  font-weight: 700;
   font-family: 'italiana';
 }
 
@@ -336,14 +341,17 @@ a {
 .shape {
   position: absolute;
   bottom: 0;
-  left: 24%;
-  width: 200px;
-  height: 200px;
-  background: #fff;
-  z-index: 1;
+  left: 100%;
+  top: 50%;
+  width: 700px;
+  height: 700px;
+  background: #000;
+  z-index: 0;
   border-radius: 50%;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+  -webkit-transform: translate(-60%, -50%);
+          transform: translate(-60%, -50%);
 }
 
 .servicios {
@@ -395,10 +403,9 @@ a {
 }
 
 .why .broken-image1 img {
-  width: 22rem;
   height: 36rem;
   position: absolute;
-  top: 26rem;
+  top: 0;
   right: 14rem;
   z-index: 2;
   -o-object-fit: fill;
@@ -674,16 +681,15 @@ p {
 }
 
 .about {
+  padding: 0 !important;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 500;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   background-color: transparent;
   width: 15%;
-  padding: 1.2rem;
   border: none;
   border-radius: 5px;
-  margin: 1rem;
   font-family: 'italiana';
   color: #fff;
   mix-blend-mode: difference;
@@ -701,10 +707,10 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 2rem;
 }
 
@@ -1570,8 +1576,8 @@ form input{
   }
   .shape {
     position: absolute;
-    bottom: 44%;
-    left: 30%;
+    top: 20%;
+    right: 50%;
     z-index: 0;
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
@@ -1592,9 +1598,6 @@ form input{
   .photo img {
     -webkit-filter: brightness(0.2);
             filter: brightness(0.2);
-  }
-  .cv {
-    display: none;
   }
   .separator {
     margin-bottom: -1rem;
@@ -1642,7 +1645,7 @@ form input{
     margin: 6rem 0rem;
   }
   .shape {
-    left: 23%;
+    right: 50%;
     pointer-events: none;
   }
   .s3-container article {
